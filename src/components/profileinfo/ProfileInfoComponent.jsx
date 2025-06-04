@@ -45,35 +45,6 @@ const ProfileInfoComponent = () => {
         </div>
       </div>
 
-       {/* Authentication Section */}
-        <div className='flex justify-center items-center gap-4 mr-5'>
-          <SignedIn>
-            <UserButton 
-              afterSignOutUrl="/"
-              appearance={{
-                elements: {
-                  userButtonAvatarBox: "h-8 w-8",
-                  userButtonTrigger: "focus:shadow-md"
-                }
-              }}
-            />
-          </SignedIn>
-          <SignedOut>
-            <div className='flex flex-col gap-2 w-full px-4'>
-              <SignInButton mode='modal'>
-                <button className='font-bold bg-transparent text-blue-400 border border-blue-400 p-2 rounded-2xl w-full hover:bg-blue-50 transition-colors duration-200'>
-                  Sign In
-                </button>
-              </SignInButton>
-              <SignUpButton mode='modal'>
-                <button className='font-bold bg-blue-400 text-white p-2 rounded-2xl w-full hover:bg-blue-500 transition-colors duration-200'>
-                  Sign Up
-                </button>
-              </SignUpButton>
-            </div>
-          </SignedOut>
-        </div>
-
       {/* Tweet Button (only visible when signed in) */}
 
       <SignedIn>
@@ -87,7 +58,7 @@ const ProfileInfoComponent = () => {
         
         <div className='w-full flex justify-between mt-10'>
           <div className='flex gap-2'>
-            <div>
+            <a href='/profile'><div>
               <img 
                 className='w-10 h-10 rounded-full object-cover' 
                 src="/Profile Picture.png" 
@@ -98,6 +69,8 @@ const ProfileInfoComponent = () => {
               <h3 className='font-bold'>Jerome Bell</h3>
               <h5 className='text-gray-400'>@afonsoinocente</h5>
             </div>
+          
+          </a>
           </div>
           <div>
             <Ellipsis className='text-gray-500 hover:text-gray-800 dark:hover:text-gray-200' />
